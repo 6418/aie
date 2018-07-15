@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+.body {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif; }
+  .body--nosotros {
+    background-image: url("../img/banner-nosotros.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; }
+  .body:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1; }
+
+.header__logo {
+  padding: 2em 0em 0em 3em;
+  display: inline-block; }
+
+.header__nav {
+  display: inline-block;
+  float: right; }
+  .header__nav ul {
+    padding: 3em 4em 2em 0; }
+    .header__nav ul li {
+      display: inline-block;
+      font-weight: 600;
+      margin-left: 2em; }
+      .header__nav ul li a {
+        color: #FFF;
+        padding-bottom: 1em;
+        -webkit-transition: all ease .5s;
+        -o-transition: all ease .5s;
+        transition: all ease .5s; }
+        .header__nav ul li a:hover {
+          border-bottom: 3px solid #009999; }
+
+.content {
+  width: 480px;
+  border: 2px solid #009999;
+  float: right;
+  margin: 3% 10% 0 0;
+  padding: 3em 2em; }
+  .content__title {
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    color: #FFF;
+    text-shadow: 1px; }
+  .content__adorno {
+    display: block;
+    margin: 0 auto; }
+  .content__p {
+    color: #FFF;
+    padding: 1em;
+    text-shadow: 1px 1px 2px black; }
+  .content__a {
+    display: block;
+    background-color: #009999;
+    color: black;
+    font-weight: bold;
+    padding: .7em 1em;
+    text-align: center;
+    max-width: 250px;
+    margin: 0 auto;
+    margin-top: 2em; }
