@@ -2,13 +2,35 @@ $green: #009999;
 *{
     margin: 0;
     padding: 0;
+    box-sizing: content-box;
 }
 a{
     text-decoration: none;
 }
+// img{
+//     max-width: 100%;
+// }
+li{
+    list-style: none;
+}
+.adorno{
+    display: block;
+    padding: 2em 0 3em 0 ;
+    margin: 0 auto;
+}
+.titles{
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    color: #FFF;
+    text-shadow: 1px 1px 2px black;
+    font-size: 2em;
+}
 .body{
-    font-size: 16px;
+    box-sizing: content-box;
+    font-size: 14px;
     font-family: 'Poppins', sans-serif;
+    height: 100vh;
     &--nosotros{
         background-image: url('../img/banner-nosotros.jpg');
         background-repeat: no-repeat;
@@ -26,25 +48,24 @@ a{
     }
 }
 .header{
+    display: flex;
+    justify-content: space-between;
     &__logo{
-        padding: 2em 0em 0em 3em;
-        display: inline-block;
+        padding: 2% 0em 0em 2%;
     }
     &__nav{
-        display: inline-block;
-        float: right;
+        padding: 4% 3% 2% 0;
         ul{
-            padding: 3em 4em 2em 0;
+            display: flex;
             li{
-                display: inline-block;
                 font-weight: 600;
                 margin-left: 2em;
                 a{
                     color: #FFF;
                     padding-bottom: 1em;
+                    border-bottom: 3px solid transparent;
                     transition: all ease .5s;
                     &:hover{
-                        // padding-bottom: 1em;
                         border-bottom: 3px solid $green;
                     }
                 }
@@ -52,27 +73,17 @@ a{
         }
     }
 }
-.content{
-    width: 480px;
+.nosotros{
+    max-width: 500px;
     border: 2px solid $green;
     float: right;
-    margin: 3% 10% 0 0;
-    padding: 3em 2em;
-    &__title{
-        text-align: center;
-        font-family: 'PT Serif', serif;
-        font-weight: 400;
-        color: #FFF;
-        text-shadow: 1px 
-    }
-    &__adorno{
-        display: block;
-        margin: 0 auto;
-    }
+    margin: 2% 10% 0 0;
+    padding: 3% 2%;
     &__p{
         color: #FFF;
         padding: 1em;
         text-shadow: 1px 1px 2px black;
+        text-align: justify;
     }
     &__a{
         display: block;
@@ -84,5 +95,49 @@ a{
         max-width: 250px;
         margin: 0 auto;
         margin-top: 2em;
+        transition: all ease .5s;
+        &:hover{
+            background-color: black;
+            color: $green;
+        }
+    }
+}
+.servicios{
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    &__wrap{
+        display: flex;
+    }
+    &__mitad{
+        width: 50%;
+        margin-top: 2%;
+    }
+    &__li{
+        display: flex;
+        margin-bottom: 2%;
+    }
+    &__img{
+        display: block;
+        align-self: center;
+        text-align: center;
+    }
+    &__p{
+        color: #FFF;
+        margin: 0 1em;
+        align-self: center;
+        text-shadow: 1px 1px 2px black;
+    }
+}
+.asociados{
+    background-color: rgba(#FFF, .8);
+    // position: absolute;
+    // bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 2.5em 0 2.5em 0;
+    &__title{
+        margin-bottom: 1em;
     }
 }

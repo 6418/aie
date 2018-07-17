@@ -1,13 +1,34 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
 
 a {
   text-decoration: none; }
 
+li {
+  list-style: none; }
+
+.adorno {
+  display: block;
+  padding: 2em 0 3em 0;
+  margin: 0 auto; }
+
+.titles {
+  text-align: center;
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
+  color: #FFF;
+  text-shadow: 1px 1px 2px black;
+  font-size: 2em; }
+
 .body {
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif; }
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh; }
   .body--nosotros {
     background-image: url("../img/banner-nosotros.jpg");
     background-repeat: no-repeat;
@@ -22,48 +43,46 @@ a {
     background-color: rgba(0, 0, 0, 0.4);
     z-index: -1; }
 
-.header__logo {
-  padding: 2em 0em 0em 3em;
-  display: inline-block; }
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .header__logo {
+    padding: 2% 0em 0em 2%; }
+  .header__nav {
+    padding: 4% 3% 2% 0; }
+    .header__nav ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .header__nav ul li {
+        font-weight: 600;
+        margin-left: 2em; }
+        .header__nav ul li a {
+          color: #FFF;
+          padding-bottom: 1em;
+          border-bottom: 3px solid transparent;
+          -webkit-transition: all ease .5s;
+          -o-transition: all ease .5s;
+          transition: all ease .5s; }
+          .header__nav ul li a:hover {
+            border-bottom: 3px solid #009999; }
 
-.header__nav {
-  display: inline-block;
-  float: right; }
-  .header__nav ul {
-    padding: 3em 4em 2em 0; }
-    .header__nav ul li {
-      display: inline-block;
-      font-weight: 600;
-      margin-left: 2em; }
-      .header__nav ul li a {
-        color: #FFF;
-        padding-bottom: 1em;
-        -webkit-transition: all ease .5s;
-        -o-transition: all ease .5s;
-        transition: all ease .5s; }
-        .header__nav ul li a:hover {
-          border-bottom: 3px solid #009999; }
-
-.content {
-  width: 480px;
+.nosotros {
+  max-width: 500px;
   border: 2px solid #009999;
   float: right;
-  margin: 3% 10% 0 0;
-  padding: 3em 2em; }
-  .content__title {
-    text-align: center;
-    font-family: 'PT Serif', serif;
-    font-weight: 400;
-    color: #FFF;
-    text-shadow: 1px; }
-  .content__adorno {
-    display: block;
-    margin: 0 auto; }
-  .content__p {
+  margin: 2% 10% 0 0;
+  padding: 3% 2%; }
+  .nosotros__p {
     color: #FFF;
     padding: 1em;
-    text-shadow: 1px 1px 2px black; }
-  .content__a {
+    text-shadow: 1px 1px 2px black;
+    text-align: justify; }
+  .nosotros__a {
     display: block;
     background-color: #009999;
     color: black;
@@ -72,4 +91,47 @@ a {
     text-align: center;
     max-width: 250px;
     margin: 0 auto;
-    margin-top: 2em; }
+    margin-top: 2em;
+    -webkit-transition: all ease .5s;
+    -o-transition: all ease .5s;
+    transition: all ease .5s; }
+    .nosotros__a:hover {
+      background-color: black;
+      color: #009999; }
+
+.servicios {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 3%;
+  margin-bottom: 3%; }
+  .servicios__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .servicios__mitad {
+    width: 50%;
+    margin-top: 2%; }
+  .servicios__li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 2%; }
+  .servicios__img {
+    display: block;
+    -ms-flex-item-align: center;
+    align-self: center;
+    text-align: center; }
+  .servicios__p {
+    color: #FFF;
+    margin: 0 1em;
+    -ms-flex-item-align: center;
+    align-self: center;
+    text-shadow: 1px 1px 2px black; }
+
+.asociados {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  text-align: center;
+  padding: 2.5em 0 2.5em 0; }
+  .asociados__title {
+    margin-bottom: 1em; }
