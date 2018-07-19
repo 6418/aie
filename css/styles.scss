@@ -7,9 +7,22 @@ $green: #009999;
 a{
     text-decoration: none;
 }
-// img{
-//     max-width: 100%;
-// }
+.btn{
+    display: block;
+    background-color: $green;
+    color: black;
+    font-weight: bold;
+    padding: 14px 16px;
+    text-align: center;
+    max-width: 250px;
+    margin: 0 auto;
+    margin-top: 2em;
+    transition: all ease .5s;
+    &:hover{
+        background-color: black;
+        color: $green;
+    }
+}
 li{
     list-style: none;
 }
@@ -28,24 +41,30 @@ li{
 }
 .body{
     box-sizing: content-box;
-    font-size: 14px;
+    font-size: 1em;
     font-family: 'Poppins', sans-serif;
     height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     &--nosotros{
         background-image: url('../img/banner-nosotros.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
     }
-    &:before{
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-color: rgba(black, .4);
-        z-index: -1;
+    &--servicios{
+        background-image: url('../img/banner-servicios.jpg');
     }
+    &--contacto{
+        background-image: url('../img/banner-contacto.jpg');
+    }
+    // &:before{
+    //     content: '';
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+    //     background-color: rgba(black, .4);
+    //     z-index: -1;
+    // }
 }
 .header{
     display: flex;
@@ -85,25 +104,9 @@ li{
         text-shadow: 1px 1px 2px black;
         text-align: justify;
     }
-    &__a{
-        display: block;
-        background-color: $green;
-        color: black;
-        font-weight: bold;
-        padding: .7em 1em;
-        text-align: center;
-        max-width: 250px;
-        margin: 0 auto;
-        margin-top: 2em;
-        transition: all ease .5s;
-        &:hover{
-            background-color: black;
-            color: $green;
-        }
-    }
 }
 .servicios{
-    width: 75%;
+    max-width: 1200px;
     margin: 0 auto;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -112,7 +115,7 @@ li{
     }
     &__mitad{
         width: 50%;
-        margin-top: 2%;
+        margin: 2% 2% 0 0;
     }
     &__li{
         display: flex;
@@ -130,6 +133,54 @@ li{
         text-shadow: 1px 1px 2px black;
     }
 }
+.contact{
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 6%;
+    &__50{
+        width: 50%;
+    }
+    &__ul{
+        color: #FFF;
+        li{
+            display: flex;
+            padding: 2em 0;
+            span{
+                padding-left: 1em;
+            }
+            &:first-child{
+                margin-top: 5em;
+            }
+        }
+    }
+    &__form{
+        max-width: 400px;
+        margin: 0 auto;
+        input{
+            width: 100%;
+            font-size: 1em;
+            background-color: rgba(#000, .5);
+            border: 1px solid #FFF;
+            padding: 1em;
+            margin-bottom: .5em;
+            outline: none;
+            color: #FFF;
+            font-weight: 300;
+            &::placeholder{
+                color: #FFF;
+                font-family: 'Poppins', sans-serif;
+            }
+        }
+        button{
+            width: 100%;
+            border: 0;
+            cursor: pointer;
+            margin: 0  auto;
+            outline: none;
+        }
+    }
+}
 .asociados{
     background-color: rgba(#FFF, .8);
     // position: absolute;
@@ -140,4 +191,35 @@ li{
     &__title{
         margin-bottom: 1em;
     }
+}
+.mySlides{
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	// background: url('') no-repeat center center fixed; 
+	background-size: cover;
+	height:100%;
+ 	// min-height:100%;
+ 	background-color: blue;
+ 	background-position: top center;
+ 	&--bg{
+ 		background-color: rgba(black,.3);
+ 		position: absolute;
+ 		width: 100%;
+ 		height: 100%;
+ 		z-index: 999;
+ 		// background-image: url('img/main-bg.gif');
+ 	}
+ 	&__slidercito{
+		height: 100%;
+		li{
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: 100%;
+            width: 100%;
+            color: #FFF;
+		}
+	}
 }

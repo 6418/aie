@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>incio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/demo-slideshow.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Poppins:100,300,400,500,600,700,800,900" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+	<script src="js/jquery.cycle2.min.js"></script>
+</head>
+<body class="body body--contacto">
+    <div class="bg bg--nosotros">
+        <header class="header">
+            <div class="header__logo">
+                <img src="img/logo.png" alt="logo">
+            </div>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="index.html">PROBLEMÁTICA</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="mySlides">
+                <div class="mySlides--bg"></div>
+                <ul class="cycle-slideshow mySlides__slidercito"
+                    data-cycle-fx="fadeout"
+                    data-cycle-speed=1200
+                    data-cycle-slides="> li"
+                    data-cycle-prev=".prev"
+                    data-cycle-next=".next"
+                    data-cycle-pager=".cycle-pager"
+                    data-cycle-timeout=3500>
+                    <li style="background-image: url('img/banner-nosotros.jpg');">
+                        <h2>¿Quisieras asesoría sobre el método Finlandes
+                            pero traer la certificación es muy costosa ?</h2>
+                            <a href="#" class="btn">Contáctenos</a>
+                    </li>
+                    <!-- <li style="background-image: url('img/banner-servicios.jpg');">hola2</li> -->
+                </ul>
+            </div>
+            <div class="cycle-pager"></div>
+        </main>
+    </div>
+</body>
+</html>

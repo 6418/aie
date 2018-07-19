@@ -7,6 +7,23 @@
 a {
   text-decoration: none; }
 
+.btn {
+  display: block;
+  background-color: #009999;
+  color: black;
+  font-weight: bold;
+  padding: 14px 16px;
+  text-align: center;
+  max-width: 250px;
+  margin: 0 auto;
+  margin-top: 2em;
+  -webkit-transition: all ease .5s;
+  -o-transition: all ease .5s;
+  transition: all ease .5s; }
+  .btn:hover {
+    background-color: black;
+    color: #009999; }
+
 li {
   list-style: none; }
 
@@ -26,22 +43,19 @@ li {
 .body {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-  font-size: 14px;
+  font-size: 1em;
   font-family: 'Poppins', sans-serif;
-  height: 100vh; }
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
   .body--nosotros {
-    background-image: url("../img/banner-nosotros.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed; }
-  .body:before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: -1; }
+    background-image: url("../img/banner-nosotros.jpg"); }
+  .body--servicios {
+    background-image: url("../img/banner-servicios.jpg"); }
+  .body--contacto {
+    background-image: url("../img/banner-contacto.jpg"); }
 
 .header {
   display: -webkit-box;
@@ -82,25 +96,9 @@ li {
     padding: 1em;
     text-shadow: 1px 1px 2px black;
     text-align: justify; }
-  .nosotros__a {
-    display: block;
-    background-color: #009999;
-    color: black;
-    font-weight: bold;
-    padding: .7em 1em;
-    text-align: center;
-    max-width: 250px;
-    margin: 0 auto;
-    margin-top: 2em;
-    -webkit-transition: all ease .5s;
-    -o-transition: all ease .5s;
-    transition: all ease .5s; }
-    .nosotros__a:hover {
-      background-color: black;
-      color: #009999; }
 
 .servicios {
-  width: 75%;
+  max-width: 1200px;
   margin: 0 auto;
   margin-top: 3%;
   margin-bottom: 3%; }
@@ -110,7 +108,7 @@ li {
     display: flex; }
   .servicios__mitad {
     width: 50%;
-    margin-top: 2%; }
+    margin: 2% 2% 0 0; }
   .servicios__li {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -128,6 +126,58 @@ li {
     align-self: center;
     text-shadow: 1px 1px 2px black; }
 
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 6%; }
+  .contact__50 {
+    width: 50%; }
+  .contact__ul {
+    color: #FFF; }
+    .contact__ul li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 2em 0; }
+      .contact__ul li span {
+        padding-left: 1em; }
+      .contact__ul li:first-child {
+        margin-top: 5em; }
+  .contact__form {
+    max-width: 400px;
+    margin: 0 auto; }
+    .contact__form input {
+      width: 100%;
+      font-size: 1em;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 1px solid #FFF;
+      padding: 1em;
+      margin-bottom: .5em;
+      outline: none;
+      color: #FFF;
+      font-weight: 300; }
+      .contact__form input::-webkit-input-placeholder {
+        color: #FFF;
+        font-family: 'Poppins', sans-serif; }
+      .contact__form input:-ms-input-placeholder {
+        color: #FFF;
+        font-family: 'Poppins', sans-serif; }
+      .contact__form input::-ms-input-placeholder {
+        color: #FFF;
+        font-family: 'Poppins', sans-serif; }
+      .contact__form input::placeholder {
+        color: #FFF;
+        font-family: 'Poppins', sans-serif; }
+    .contact__form button {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+      margin: 0  auto;
+      outline: none; }
+
 .asociados {
   background-color: rgba(255, 255, 255, 0.8);
   width: 100%;
@@ -135,3 +185,28 @@ li {
   padding: 2.5em 0 2.5em 0; }
   .asociados__title {
     margin-bottom: 1em; }
+
+.mySlides {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+  background-color: blue;
+  background-position: top center; }
+  .mySlides--bg {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999; }
+  .mySlides__slidercito {
+    height: 100%; }
+    .mySlides__slidercito li {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 100%;
+      width: 100%;
+      color: #FFF; }
