@@ -7,6 +7,9 @@ $green: #009999;
 a{
     text-decoration: none;
 }
+img{
+    max-width: 100%;
+}
 .btn{
     display: block;
     background-color: $green;
@@ -90,6 +93,47 @@ li{
                 }
             }
         }
+        #btnMovil{
+			display: none;
+			& + label{
+				display: none;
+			}
+		}
+    }
+}
+@media screen and (max-width: 900px){
+    .header{
+        display: block;
+        text-align: center;
+        &__nav{
+			ul{
+				flex-direction: column;
+				position: fixed;
+				width: 150px;
+				right: -50%;
+				z-index: 2;
+				transition: all .5s;
+				bottom: 9rem;
+				li{
+					border-right: 0 !important;
+					display: block;
+					&:nth-child(1){
+						border-left: 0 !important;
+					}
+				    a{
+				    	padding: 1.25rem !important;
+						text-transform: capitalize !important;
+				    }
+				}
+			}
+		}
+		#btnMovil:checked ~ &__ul{
+			background-color: #FFF;
+			cursor: pointer;
+			right: 1rem;
+			box-shadow: 2px 4px 40px 0px rgba(black,.7);
+			overflow: auto;
+		}
     }
 }
 .nosotros{
@@ -103,6 +147,10 @@ li{
         padding: 1em;
         text-shadow: 1px 1px 2px black;
         text-align: justify;
+    }
+    @media screen and (max-width: 900px){
+        margin: 5em;
+        float: none;
     }
 }
 .servicios{
