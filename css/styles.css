@@ -89,6 +89,8 @@ li {
           transition: all ease .5s; }
           .header__nav ul li a:hover {
             border-bottom: 3px solid #009999; }
+        .header__nav ul li .active {
+          border-bottom: 3px solid #009999; }
     .header__nav #btnMovil {
       display: none; }
       .header__nav #btnMovil + label {
@@ -150,7 +152,7 @@ li {
   max-width: 500px;
   border: 2px solid #009999;
   float: right;
-  margin: 2% 10% 0 0;
+  margin: 2% 10% 2% 0;
   padding: 3% 2%; }
   .nosotros__p {
     color: #FFF;
@@ -179,8 +181,10 @@ li {
     display: block;
     -ms-flex-item-align: center;
     align-self: center;
-    text-align: center; }
+    text-align: center;
+    width: 20%; }
   .servicios__p {
+    width: 80%;
     color: #FFF;
     margin: 0 1em;
     -ms-flex-item-align: center;
@@ -245,9 +249,17 @@ li {
   background-color: rgba(255, 255, 255, 0.8);
   width: 100%;
   text-align: center;
-  padding: 2.5em 0 2.5em 0; }
+  padding: 2.5em 0 2.5em 0;
+  clear: both; }
   .asociados__title {
     margin-bottom: 1em; }
+  .asociados .mySlider2 {
+    max-width: 800px;
+    margin: 0 auto; }
+    .asociados .mySlider2__item img {
+      text-align: center;
+      width: auto;
+      margin: 0 auto; }
 
 @media screen and (max-width: 900px) {
   .adorno {

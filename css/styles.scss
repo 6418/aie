@@ -93,6 +93,9 @@ li{
                         border-bottom: 3px solid $green;
                     }
                 }
+                .active{
+                    border-bottom: 3px solid $green;
+                }
             }
         }
         #btnMovil{
@@ -160,7 +163,7 @@ li{
     max-width: 500px;
     border: 2px solid $green;
     float: right;
-    margin: 2% 10% 0 0;
+    margin: 2% 10% 2% 0;
     padding: 3% 2%;
     &__p{
         color: #FFF;
@@ -189,8 +192,10 @@ li{
         display: block;
         align-self: center;
         text-align: center;
+        width: 20%;
     }
     &__p{
+        width: 80%;
         color: #FFF;
         margin: 0 1em;
         align-self: center;
@@ -248,13 +253,23 @@ li{
 }
 .asociados{
     background-color: rgba(#FFF, .8);
-    // position: absolute;
-    // bottom: 0;
     width: 100%;
     text-align: center;
     padding: 2.5em 0 2.5em 0;
+    clear: both;
     &__title{
         margin-bottom: 1em;
+    }
+    .mySlider2{
+        max-width: 800px;
+        margin: 0 auto;
+        &__item{
+            img{
+                text-align: center;
+                width: auto;
+                margin: 0 auto;
+            }
+        }
     }
 }
 @media screen and (max-width: 900px){

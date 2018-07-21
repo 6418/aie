@@ -2,9 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>incio</title>
+    <title>SERVICIOS | AIE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Poppins:400,500,600,700,800,900" rel="stylesheet">
 </head>
@@ -22,7 +24,7 @@
                 <ul class="header__ul">
                     <li><a href="index.html">PROBLEMÁTICA</a></li>
                     <li><a href="nosotros.html">NOSOTROS</a></li>
-                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="servicios.html" class="active">SERVICIOS</a></li>
                     <li><a href="contacto.html">CONTACTO</a></li>
                 </ul>
             </nav>
@@ -35,7 +37,11 @@
                     <ul class="servicios__mitad">
                         <li class="servicios__li">
                             <div class="servicios__img"><img src="img/icon-01.jpg" alt=""></div>
-                            <p class="servicios__p">Encuentro face to face con otros colegios y nidos y estudiar nuestra problemática conjunta para mejorar nuestra situación.  </p>
+                            <p class="servicios__p">Encuentro face to face con otros colegios y nidos.</p>
+                        </li>
+                        <li class="servicios__li">
+                            <div class="servicios__img"><img src="img/icon-06.jpg" alt=""></div>
+                            <p class="servicios__p">Estudiar nuestra problemática conjunta para mejorar nuestra situación.</p>
                         </li>
                         <li class="servicios__li">
                             <div class="servicios__img"><img src="img/icon-02.jpg" alt=""></div>
@@ -48,8 +54,12 @@
                     </ul>
                     <ul class="servicios__mitad">
                         <li class="servicios__li">
-                            <div class="servicios__img"><img src="img/icon-04.jpg" alt=""></div>
+                            <div class="servicios__img"><img src="img/icon-03.jpg" alt=""></div>
                             <p class="servicios__p">Referencia real sobre profesores vallamos a contratar.</p>
+                        </li>
+                        <li class="servicios__li">
+                            <div class="servicios__img"><img src="img/icon-04.jpg" alt=""></div>
+                            <p class="servicios__p">Contacto entre potenciales inversionistas y dueños de colegios o nidos. </p>
                         </li>
                         <li class="servicios__li">
                             <div class="servicios__img"><img src="img/icon-05.jpg" alt=""></div>
@@ -67,11 +77,33 @@
         <footer>
             <aside class="asociados">
                 <h3 class="asociados__title">Colegios Asociados</h3>
-                <ul>
-                    <li><img src="img/kasner.png" alt=""></li>
+                <ul class="owl-carousel mySlider2">
+                    <li class="mySlider2__item">
+                        <img src="img/kasner.png" alt="kasner">
+                    </li>
+                    <li class="mySlider2__item">
+                        <img src="img/aprendiendo.png" alt="">
+                    </li>
                 </ul>
             </aside>
         </footer>
     </div>
+    <script src="js/jquery.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.owl-carousel').owlCarousel({
+			    loop:true,
+			    margin:10,
+			    nav:false,
+			    autoplay: false,
+			    autoplayTimeout: 5000,
+                dots: true,
+                items: 2,
+                animateOut: 'fadeOut'
+
+			})
+		});
+	</script>
 </body>
 </html>
