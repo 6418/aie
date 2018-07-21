@@ -66,7 +66,9 @@ li {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  position: relative;
+  z-index: 2; }
   .header__logo {
     padding: 2% 0em 0em 2%; }
   .header__nav {
@@ -92,38 +94,57 @@ li {
       .header__nav #btnMovil + label {
         display: none; }
 
-@media screen and (max-width: 900px) {
-  .header {
+.mySlider {
+  color: #FFF;
+  position: absolute;
+  top: 0; }
+  .mySlider__item {
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding-right: 5%; }
+    .mySlider__item__content {
+      -ms-flex-item-align: center;
+      align-self: center; }
+    .mySlider__item--uno {
+      background-image: url("../img/inicio-01.jpg"); }
+    .mySlider__item--dos {
+      background-image: url("../img/inicio-02.jpg"); }
+    .mySlider__item--tres {
+      background-image: url("../img/inicio-03.jpg"); }
+  .mySlider .owl-nav.disabled + .owl-dots {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto; }
+  .mySlider .owl-dots {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent; }
+  .mySlider .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    *display: inline; }
+  .mySlider .owl-dots .owl-dot span {
+    width: 20px;
+    height: 20px;
+    margin: 5px 7px;
+    background: #D6D6D6;
     display: block;
-    text-align: center; }
-    .header__nav ul {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      position: fixed;
-      width: 150px;
-      right: -50%;
-      z-index: 2;
-      -webkit-transition: all .5s;
-      -o-transition: all .5s;
-      transition: all .5s;
-      bottom: 9rem; }
-      .header__nav ul li {
-        border-right: 0 !important;
-        display: block; }
-        .header__nav ul li:nth-child(1) {
-          border-left: 0 !important; }
-        .header__nav ul li a {
-          padding: 1.25rem !important;
-          text-transform: capitalize !important; }
-    #btnMovil:checked ~ .header__ul {
-      background-color: #FFF;
-      cursor: pointer;
-      right: 1rem;
-      -webkit-box-shadow: 2px 4px 40px 0px rgba(0, 0, 0, 0.7);
-      box-shadow: 2px 4px 40px 0px rgba(0, 0, 0, 0.7);
-      overflow: auto; } }
+    -webkit-backface-visibility: visible;
+    -webkit-transition: opacity 200ms ease;
+    -o-transition: opacity 200ms ease;
+    transition: opacity 200ms ease;
+    border-radius: 30px; }
+  .mySlider .owl-dots .owl-dot.active span, .mySlider .owl-dots .owl-dot:hover span {
+    background: #869791; }
 
 .nosotros {
   max-width: 500px;
@@ -136,10 +157,6 @@ li {
     padding: 1em;
     text-shadow: 1px 1px 2px black;
     text-align: justify; }
-  @media screen and (max-width: 900px) {
-    .nosotros {
-      margin: 5em;
-      float: none; } }
 
 .servicios {
   max-width: 1200px;
@@ -202,7 +219,9 @@ li {
       margin-bottom: .5em;
       outline: none;
       color: #FFF;
-      font-weight: 300; }
+      font-weight: 300;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
       .contact__form input::-webkit-input-placeholder {
         color: #FFF;
         font-family: 'Poppins', sans-serif; }
@@ -230,27 +249,87 @@ li {
   .asociados__title {
     margin-bottom: 1em; }
 
-.mySlides {
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  width: 100%;
-  background-size: cover;
-  height: 100%;
-  background-color: blue;
-  background-position: top center; }
-  .mySlides--bg {
-    background-color: rgba(0, 0, 0, 0.3);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 999; }
-  .mySlides__slidercito {
-    height: 100%; }
-    .mySlides__slidercito li {
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      height: 100%;
+@media screen and (max-width: 900px) {
+  .adorno {
+    padding: 1em 0 2em 0; }
+  .mySlider__item {
+    padding: 0; }
+    .mySlider__item__content {
+      padding: 0 3em; }
+  .header {
+    display: block;
+    text-align: center; }
+    .header__nav {
+      padding: 0; }
+      .header__nav ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: fixed;
+        width: 150px;
+        right: -50%;
+        z-index: 2;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+        bottom: 9rem; }
+        .header__nav ul li {
+          margin: 0; }
+          .header__nav ul li a {
+            display: block;
+            text-align: left;
+            padding: 10px; }
+      .header__nav #btnMovil + label {
+        display: block !important;
+        background-color: #FFF;
+        -webkit-box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.8);
+        box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.8);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 5px;
+        position: fixed;
+        bottom: 4rem;
+        z-index: 3;
+        right: 1.5rem;
+        font-size: 2em; }
+        .header__nav #btnMovil + label img {
+          display: block;
+          margin: 12px auto;
+          width: 30px; }
+        .header__nav #btnMovil + label:hover {
+          cursor: pointer; }
+    #btnMovil:checked ~ .header__ul {
+      background-color: #000;
+      cursor: pointer;
+      right: 1rem;
+      -webkit-box-shadow: 2px 4px 40px 0px rgba(0, 0, 0, 0.7);
+      box-shadow: 2px 4px 40px 0px rgba(0, 0, 0, 0.7);
+      overflow: auto; }
+  .main {
+    padding: 1em; }
+  .nosotros {
+    margin: 0 auto;
+    float: none; }
+  .servicios__wrap {
+    display: block; }
+  .servicios__mitad {
+    width: 100%; }
+  .servicios__img {
+    width: 20%; }
+  .servicios__p {
+    width: 80%;
+    font-size: .9em; }
+  .contact {
+    display: block;
+    margin: 0 auto; }
+    .contact__50 {
       width: 100%;
+      margin-top: 1em; }
+    .contact__ul {
       color: #FFF; }
+      .contact__ul li {
+        padding: .5em 0; }
+        .contact__ul li:first-child {
+          margin-top: 0; } }

@@ -72,6 +72,8 @@ li{
 .header{
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 2;
     &__logo{
         padding: 2% 0em 0em 2%;
     }
@@ -101,41 +103,59 @@ li{
 		}
     }
 }
-@media screen and (max-width: 900px){
-    .header{
-        display: block;
-        text-align: center;
-        &__nav{
-			ul{
-				flex-direction: column;
-				position: fixed;
-				width: 150px;
-				right: -50%;
-				z-index: 2;
-				transition: all .5s;
-				bottom: 9rem;
-				li{
-					border-right: 0 !important;
-					display: block;
-					&:nth-child(1){
-						border-left: 0 !important;
-					}
-				    a{
-				    	padding: 1.25rem !important;
-						text-transform: capitalize !important;
-				    }
-				}
-			}
-		}
-		#btnMovil:checked ~ &__ul{
-			background-color: #FFF;
-			cursor: pointer;
-			right: 1rem;
-			box-shadow: 2px 4px 40px 0px rgba(black,.7);
-			overflow: auto;
-		}
+.mySlider{
+    color: #FFF;
+    position: absolute;
+    top: 0;
+	&__item{
+        background-size: cover;
+        background-position: center center;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 5%;
+        &__content{
+            align-self: center;
+        }
+		&--uno{
+            background-image: url('../img/inicio-01.jpg');
+        }
+        &--dos{
+            background-image: url('../img/inicio-02.jpg');
+        }
+        &--tres{
+            background-image: url('../img/inicio-03.jpg');
+        }
     }
-}
+    .owl-nav.disabled + .owl-dots{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+    .owl-dots {
+        text-align: center;
+        -webkit-tap-highlight-color: transparent; }
+        .owl-dots .owl-dot {
+            display: inline-block;
+            zoom: 1;
+            *display: inline;
+        }
+        .owl-dots .owl-dot span {
+            width: 20px;
+            height: 20px;
+            margin: 5px 7px;
+            background: #D6D6D6;
+            display: block;
+            -webkit-backface-visibility: visible;
+            transition: opacity 200ms ease;
+            border-radius: 30px; }
+        .owl-dots .owl-dot.active span, .owl-dots .owl-dot:hover span {
+            background: #869791;
+        }
+    }
 .nosotros{
     max-width: 500px;
     border: 2px solid $green;
@@ -147,10 +167,6 @@ li{
         padding: 1em;
         text-shadow: 1px 1px 2px black;
         text-align: justify;
-    }
-    @media screen and (max-width: 900px){
-        margin: 5em;
-        float: none;
     }
 }
 .servicios{
@@ -215,6 +231,7 @@ li{
             outline: none;
             color: #FFF;
             font-weight: 300;
+            box-sizing: border-box;
             &::placeholder{
                 color: #FFF;
                 font-family: 'Poppins', sans-serif;
@@ -240,34 +257,114 @@ li{
         margin-bottom: 1em;
     }
 }
-.mySlides{
-	position: absolute;
-	top: 0;
-	z-index: -1;
-	width: 100%;
-	// background: url('') no-repeat center center fixed; 
-	background-size: cover;
-	height:100%;
- 	// min-height:100%;
- 	background-color: blue;
- 	background-position: top center;
- 	&--bg{
- 		background-color: rgba(black,.3);
- 		position: absolute;
- 		width: 100%;
- 		height: 100%;
- 		z-index: 999;
- 		// background-image: url('img/main-bg.gif');
- 	}
- 	&__slidercito{
-		height: 100%;
-		li{
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center center;
-			height: 100%;
+@media screen and (max-width: 900px){
+    .adorno{
+        padding: 1em 0 2em 0;
+    }
+    .mySlider{
+        &__item{
+            padding: 0;
+            &__content{
+                padding: 0 3em;
+            }
+        }
+    }
+    .header{
+        display: block;
+        text-align: center;
+        &__nav{
+            padding: 0;
+			ul{
+				flex-direction: column;
+				position: fixed;
+				width: 150px;
+				right: -50%;
+				z-index: 2;
+				transition: all .5s;
+				bottom: 9rem;
+				li{
+                    margin: 0;
+					// &:nth-child(1){
+					// 	border-left: 0 !important;
+					// }
+				    a{
+				    	// padding: 1.25rem !important;
+                        // text-transform: capitalize !important;
+                        display: block;
+                        text-align: left;
+                        padding: 10px;
+				    }
+				}
+            }
+            #btnMovil + label{
+                display: block !important;
+                background-color: #FFF;
+                box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.8);
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                padding: 5px;
+                position: fixed;
+                bottom: 4rem;
+                z-index: 3;
+                right: 1.5rem;
+                font-size: 2em;
+                img{
+                    display: block;
+                    margin: 12px auto;
+                    width: 30px;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+		}	
+                #btnMovil:checked ~ &__ul{
+                    background-color: #000;
+                    cursor: pointer;
+                    right: 1rem;
+                    box-shadow: 2px 4px 40px 0px rgba(black,.7);
+                    overflow: auto;
+                }
+    }
+    .main{
+        padding: 1em;
+    }
+    .nosotros{
+        margin: 0 auto;
+        float: none;
+    }
+    .servicios{
+        &__wrap{
+            display: block;
+        }
+        &__mitad{
             width: 100%;
+        }
+        &__img{
+            width: 20%;
+        }
+        &__p{
+            width: 80%;
+            font-size: .9em;
+        }
+    }
+    .contact{
+        display: block;
+        margin: 0 auto;
+        // margin-top: 6%;
+        &__50{
+            width: 100%;
+            margin-top: 1em;
+        }
+        &__ul{
             color: #FFF;
-		}
-	}
+            li{
+                padding: .5em 0;
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
 }
