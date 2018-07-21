@@ -31,7 +31,7 @@ li{
 }
 .adorno{
     display: block;
-    padding: 2em 0 3em 0 ;
+    padding: 1em 0;
     margin: 0 auto;
 }
 .titles{
@@ -44,7 +44,7 @@ li{
 }
 .body{
     box-sizing: content-box;
-    font-size: 1em;
+    font-size: 14px;
     font-family: 'Poppins', sans-serif;
     height: 100vh;
     background-repeat: no-repeat;
@@ -75,10 +75,10 @@ li{
     position: relative;
     z-index: 2;
     &__logo{
-        padding: 2% 0em 0em 2%;
+        padding: 1% 0em 0em 1%;
     }
     &__nav{
-        padding: 4% 3% 2% 0;
+        padding: 3% 2% 1% 0;
         ul{
             display: flex;
             li{
@@ -160,11 +160,12 @@ li{
         }
     }
 .nosotros{
-    max-width: 500px;
+    max-width: 800px;
     border: 2px solid $green;
-    float: right;
-    margin: 2% 10% 2% 0;
-    padding: 3% 2%;
+    margin: 0 auto;
+    padding: 2% 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     &__p{
         color: #FFF;
         padding: 1em;
@@ -175,14 +176,13 @@ li{
 .servicios{
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin-top: 1%;
     &__wrap{
         display: flex;
     }
     &__mitad{
         width: 50%;
-        margin: 2% 2% 0 0;
+        margin: 1% 1% 0 0;
     }
     &__li{
         display: flex;
@@ -214,7 +214,7 @@ li{
         color: #FFF;
         li{
             display: flex;
-            padding: 2em 0;
+            padding: 1em 0;
             span{
                 padding-left: 1em;
             }
@@ -255,8 +255,11 @@ li{
     background-color: rgba(#FFF, .8);
     width: 100%;
     text-align: center;
-    padding: 2.5em 0 2.5em 0;
+    padding: 2em 0;
     clear: both;
+    position:fixed;
+    left:0px;
+    bottom:0px;
     &__title{
         margin-bottom: 1em;
     }
