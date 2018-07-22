@@ -221,6 +221,9 @@ li{
             &:first-child{
                 margin-top: 5em;
             }
+            a{
+                color: #FFF;
+            }
         }
     }
     &__form{
@@ -384,5 +387,8 @@ li{
                 }
             }
         }
+    }
+    .asociados{
+        position:static;
     }
 }

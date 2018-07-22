@@ -7,6 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Poppins:100,300,400,500,600,700,800,900" rel="stylesheet">
+    <style>
+        .oculto {
+            display: none !important;
+        }
+    
+        .ajaxGif {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: .5em;
+        }
+    </style>
 </head>
 <body class="body body--contacto">
     <div class="bg bg--nosotros">
@@ -34,24 +46,28 @@
                     <ul class="contact__ul">
                         <li><img src="img/icon-phone.png" alt=""><span> 924 777 835</span></li>
                         <li><img src="img/icon-email.png" alt=""><span> informes@aie-peru.com</span></li>
-                        <li><img src="img/icon-fb.png" alt=""><span> www.facebook.com/aie-peru</span></li>
+                        <li><img src="img/icon-fb.png" alt=""><span> <a href="https://www.facebook.com/aieperu1" target="_blank">www.facebook.com/aieperu1</a></span></li>
                         <li><img src="img/icon-web.png" alt=""><span> www.aie-peru.com</span></li>
                     </ul>
                 </div>
                 <div class="contact__50">
                     <h2 class="titles">Desear formar parte de AIE</h2>
                     <img src="img/adorno.png" class="adorno" alt="adorno">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Nombre Completo">
-                        <input type="text" placeholder="Teléfono">
-                        <input type="text" placeholder="Email">
-                        <input type="text" placeholder="Cargo">
-                        <input type="text" placeholder="Empresa o Centro Educativo">
+                    <form action="process.php" class="contact__form" id="enviarContacto">
+                        <input type="text" name="name" placeholder="Nombre Completo">
+                        <input type="text" name="phone" placeholder="Teléfono">
+                        <input type="text" name="email" placeholder="Email">
+                        <input type="text" name="cargo" placeholder="Cargo">
+                        <input type="text" name="empresa" placeholder="Empresa o Centro Educativo">
+                        <input type="hidden" name="contacto">
+                        <img src="img/ajax.gif" alt="" class="ajaxGif oculto">
                         <button class="btn">Contáctenos</button>
                     </form>
                 </div>
             </section>
         </main>
     </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

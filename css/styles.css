@@ -211,6 +211,8 @@ li {
         padding-left: 1em; }
       .contact__ul li:first-child {
         margin-top: 5em; }
+      .contact__ul li a {
+        color: #FFF; }
   .contact__form {
     max-width: 400px;
     margin: 0 auto; }
@@ -347,4 +349,6 @@ li {
       .contact__ul li {
         padding: .5em 0; }
         .contact__ul li:first-child {
-          margin-top: 0; } }
+          margin-top: 0; }
+  .asociados {
+    position: static; } }
