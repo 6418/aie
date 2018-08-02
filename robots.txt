@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /aie/
+Disallow: /domo/
+Disallow: /licoin/
+Disallow: /poker/
+Disallow: /poker2/
+Disallow: /rosadio-form/
+Disallow: /tours4tipss/
+Disallow: /wwce/
+Disallow: /mytemps/
